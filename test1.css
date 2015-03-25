@@ -1,0 +1,171 @@
+*{
+	margin:0px;
+	padding:0px;
+	background: black;
+}
+#backpic{
+	background: black;
+}
+header, section, footer, aside, nav, article, hgroup{
+	display:block;
+}
+
+body{
+	text-align:center;
+}
+
+#big_wrapper{
+	margin: 20px auto;
+	max-width: 1002px;
+	text-align: left;
+	border: 2px solid white;
+	background:black;
+}
+#top_header{
+	clear: both;
+	text-align:center;
+	size: 100px;
+	padding:20px;
+}
+
+#top_menu{
+	background: black;
+	text-align:center;
+	margin-left: auto;
+	margin-right: auto;
+	padding:25px;
+}
+
+#top_menu li{
+	display:inline-block;
+	text-align: center;
+	border:1px solid white;
+	width:120px;
+	margin: 10px;
+	height: 20px;
+	background: black;
+	color: white;
+	list-style:none;
+	-webkit-transition: all 1s ease-in;
+	
+}
+
+#top_menu li:link, #top_menu li:visited{
+	color:white;
+}
+
+#top_menu li:hover{
+	-webkit-transform: translatey(-7px);
+	background: black;
+	color: white;
+
+}
+
+#main_section{
+	font: 20px Tahoma;
+	color: white;
+	float: left;
+	width: 660px;
+	margin:30px;/*720px, 280 left;*/
+	background: black;
+	line-height: 2em;
+}
+#side_news{
+	float:left;
+	color: white;
+	width: 220px;
+	margin: 20px 0px;
+	padding:20px;
+	background: black;
+	border:1px solid white;
+}
+.center_text{
+	text-align:center;
+}
+footer{
+clear:both;
+text-align:center;
+padding:20px;
+border-top: 2px solid white;
+background: black;
+color: white;
+
+}
+#pastorpic{
+	max-width:210px;
+}
+#skin{
+	width: 640px;
+	margin: 10px auto;
+	padding:5px;
+	background: black;
+	border:4px solid white;
+	border-radius: 10px;
+}
+
+/*Time for the CSS*/
+* {margin: 0; padding: 0;}
+body {background: #ccc;}
+
+.slider{
+	width: 640px; /*Same as width of the large image*/
+	position: relative;
+	/*Instead of height we will use padding*/
+	padding-top: 600px; /*That helps bring the labels down*/
+	
+	margin: 100px auto;
+	
+	/*Lets add a shadow*/
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+
+
+/*Last thing remaining is to add transitions*/
+.slider>img{
+	position: absolute;
+	left: 0; top: 0;
+	transition: all 0.5s;
+}
+
+.slider input[name='slide_switch'] {
+	display: none;
+}
+
+.slider label {
+	/*Lets add some spacing for the thumbnails*/
+	margin: 18px 0 0 18px;
+	border: 3px solid #999;
+	
+	float: left;
+	cursor: pointer;
+	transition: all 0.5s;
+	
+	/*Default style = low opacity*/
+	opacity: 0.6;
+}
+
+.slider label img{
+	display: block;
+}
+
+/*Time to add the click effects*/
+.slider input[name='slide_switch']:checked+label {
+	border-color: #666;
+	opacity: 1;
+}
+/*Clicking any thumbnail now should change its opacity(style)*/
+/*Time to work on the main images*/
+.slider input[name='slide_switch'] ~ img {
+	opacity: 0;
+	transform: scale(1.1);
+}
+/*That hides all main images at a 110% size
+On click the images will be displayed at normal size to complete the effect
+*/
+.slider input[name='slide_switch']:checked+label+img {
+	opacity: 1;
+	transform: scale(1);
+}
+/*Clicking on any thumbnail now should activate the image related to it*/
+
+/*We are done :)*/
